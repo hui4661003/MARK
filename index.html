@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///Users/kemeitongxun/.gemini/antigravity/scratch/fazao-dashboard/index.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>法考学员推班数据看板</title>
+  <link href="./推班决策卡_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./推班决策卡_files/style.css">
+</head>
+<body style="">
+
+<!-- ═══ 顶部学员信息 ═══ -->
+<header class="top-bar">
+  <div class="top-inner">
+    <div class="student-block">
+      <div class="avatar">李</div>
+      <div class="student-info">
+        <div class="student-name">
+          李小明
+          <span class="chip chip-active">学习中</span>
+          <span class="chip chip-warn">推班紧迫</span>
+        </div>
+        <div class="student-meta">
+          <span>📱 138-****-8821</span>
+          <span>🎓 2024基础班</span>
+          <span>📅 成单 2025-05-03</span>
+          <span>👤 班主任：王老师</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-right">
+      <div class="stat-pills">
+        <div class="stat-pill">
+          <span class="pill-val">82%</span>
+          <span class="pill-label">综合完课率</span>
+        </div>
+        <div class="stat-pill good">
+          <span class="pill-val">68%</span>
+          <span class="pill-label">做题正确率</span>
+        </div>
+        <div class="stat-pill">
+          <span class="pill-val">12天</span>
+          <span class="pill-label">连续学习</span>
+        </div>
+        <div class="stat-pill">
+          <span class="pill-val">今天</span>
+          <span class="pill-label">最后登录</span>
+        </div>
+      </div>
+      <div class="countdown-box">
+        <div class="cd-num">7</div>
+        <div class="cd-label">推班剩余天数</div>
+        <div class="cd-deadline">截止 05-25</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="push-banner">
+    <span class="push-dot"></span>
+    <strong>推班时机评估：</strong>学员近7天活跃，正确率持续提升，理论法正确率仅43%为核心痛点。
+    <span class="push-recommend">建议立即推班 →</span>
+  </div>
+</header>
+
+<!-- ═══ 主体内容 ═══ -->
+<main class="main-grid">
+
+  <!-- ── 左栏：听课情况 ── -->
+  <aside class="left-col">
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">📖 听课情况 · 八大法</span>
+        <span class="badge">总学时 223h</span>
+      </div>
+
+      <!-- 科目进度 -->
+      <div class="subject-list">
+        <div class="subject-row">
+          <div class="sub-name"><i class="dot"></i>刑法</div>
+          <div class="sub-bar"><div class="sub-fill" style="width:91%"></div></div>
+          <div class="sub-pct">91%</div>
+          <div class="sub-hour">42.5h</div>
+        </div>
+        <div class="subject-row">
+          <div class="sub-name"><i class="dot d2"></i>民法</div>
+          <div class="sub-bar"><div class="sub-fill" style="width:76%"></div></div>
+          <div class="sub-pct">76%</div>
+          <div class="sub-hour">38.2h</div>
+        </div>
+        <div class="subject-row">
+          <div class="sub-name"><i class="dot d3"></i>行政法</div>
+          <div class="sub-bar"><div class="sub-fill" style="width:88%"></div></div>
+          <div class="sub-pct">88%</div>
+          <div class="sub-hour">29.1h</div>
+        </div>
+        <div class="subject-row">
+          <div class="sub-name"><i class="dot d4"></i>商法</div>
+          <div class="sub-bar"><div class="sub-fill" style="width:65%"></div></div>
+          <div class="sub-pct">65%</div>
+          <div class="sub-hour">18.7h</div>
+        </div>
+        <div class="subject-row">
+          <div class="sub-name"><i class="dot d5"></i>经济法</div>
+          <div class="sub-bar"><div class="sub-fill" style="width:80%"></div></div>
+          <div class="sub-pct">80%</div>
+          <div class="sub-hour">22.3h</div>
+        </div>
+        <div class="subject-row">
+          <div class="sub-name"><i class="dot d6"></i>民事诉讼</div>
+          <div class="sub-bar"><div class="sub-fill" style="width:72%"></div></div>
+          <div class="sub-pct">72%</div>
+          <div class="sub-hour">26.8h</div>
+        </div>
+        <div class="subject-row">
+          <div class="sub-name"><i class="dot d7"></i>刑事诉讼</div>
+          <div class="sub-bar"><div class="sub-fill" style="width:90%"></div></div>
+          <div class="sub-pct">90%</div>
+          <div class="sub-hour">31.4h</div>
+        </div>
+        <div class="subject-row warn">
+          <div class="sub-name"><i class="dot d8"></i>理论法学</div>
+          <div class="sub-bar"><div class="sub-fill" style="width:55%;background:#aaaaaa"></div></div>
+          <div class="sub-pct warn-text">55%</div>
+          <div class="sub-hour">14.2h</div>
+        </div>
+      </div>
+
+      <!-- 分割线 -->
+      <div class="section-divider">
+        <span>最近听课记录</span>
+      </div>
+
+      <!-- 筛选 Tabs -->
+      <div class="filter-tabs" id="listen-tabs">
+        <button class="ftab" data-target="listen" data-range="1">昨天</button>
+        <button class="ftab" data-target="listen" data-range="3">近3天</button>
+        <button class="ftab active" data-target="listen" data-range="7">近7天</button>
+      </div>
+
+      <!-- 听课列表 -->
+      <div class="listen-list" id="listen-list">
+        <!-- 昨天 -->
+        <div class="listen-group hidden" data-range="1">
+          <div class="group-label">昨天</div>
+          <div class="listen-item">
+            <div class="li-tag">刑法</div>
+            <div class="li-body">
+              <div class="li-title">第14讲 · 故意杀人罪的认定</div>
+              <div class="li-meta">今天 10:30 &nbsp;·&nbsp; 52 min</div>
+            </div>
+            <div class="li-prog">
+              <div class="li-bar"><div style="width:78%"></div></div>
+              <span>78%</span>
+            </div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t2">民法</div>
+            <div class="li-body">
+              <div class="li-title">第22讲 · 物权变动规则</div>
+              <div class="li-meta">昨天 21:15 &nbsp;·&nbsp; 48 min</div>
+            </div>
+            <div class="li-prog">
+              <div class="li-bar"><div style="width:100%"></div></div>
+              <span>完成</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 近3天 -->
+        <div class="listen-group hidden" data-range="3">
+          <div class="group-label">近3天</div>
+          <div class="listen-item">
+            <div class="li-tag">刑法</div>
+            <div class="li-body">
+              <div class="li-title">第14讲 · 故意杀人罪的认定</div>
+              <div class="li-meta">今天 10:30 &nbsp;·&nbsp; 52 min</div>
+            </div>
+            <div class="li-prog"><div class="li-bar"><div style="width:78%"></div></div><span>78%</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t2">民法</div>
+            <div class="li-body">
+              <div class="li-title">第22讲 · 物权变动规则</div>
+              <div class="li-meta">昨天 21:15 &nbsp;·&nbsp; 48 min</div>
+            </div>
+            <div class="li-prog"><div class="li-bar"><div style="width:100%"></div></div><span>完成</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t3">刑诉</div>
+            <div class="li-body">
+              <div class="li-title">第9讲 · 强制措施体系</div>
+              <div class="li-meta">前天 19:40 &nbsp;·&nbsp; 61 min</div>
+            </div>
+            <div class="li-prog"><div class="li-bar"><div style="width:100%"></div></div><span>完成</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t4">行政法</div>
+            <div class="li-body">
+              <div class="li-title">第17讲 · 行政处罚的设定</div>
+              <div class="li-meta">前天 14:20 &nbsp;·&nbsp; 45 min</div>
+            </div>
+            <div class="li-prog"><div class="li-bar"><div style="width:60%"></div></div><span>60%</span></div>
+          </div>
+        </div>
+
+        <!-- 近7天 -->
+        <div class="listen-group" data-range="7">
+          <div class="group-label">近7天</div>
+          <div class="listen-item">
+            <div class="li-tag">刑法</div>
+            <div class="li-body"><div class="li-title">第14讲 · 故意杀人罪的认定</div><div class="li-meta">今天 10:30 · 52 min</div></div>
+            <div class="li-prog"><div class="li-bar"><div style="width:78%"></div></div><span>78%</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t2">民法</div>
+            <div class="li-body"><div class="li-title">第22讲 · 物权变动规则</div><div class="li-meta">昨天 21:15 · 48 min</div></div>
+            <div class="li-prog"><div class="li-bar"><div style="width:100%"></div></div><span>完成</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t3">刑诉</div>
+            <div class="li-body"><div class="li-title">第9讲 · 强制措施体系</div><div class="li-meta">前天 19:40 · 61 min</div></div>
+            <div class="li-prog"><div class="li-bar"><div style="width:100%"></div></div><span>完成</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t4">行政法</div>
+            <div class="li-body"><div class="li-title">第17讲 · 行政处罚的设定</div><div class="li-meta">前天 14:20 · 45 min</div></div>
+            <div class="li-prog"><div class="li-bar"><div style="width:60%"></div></div><span>60%</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t5">经济法</div>
+            <div class="li-body"><div class="li-title">第11讲 · 证券法基础</div><div class="li-meta">5天前 20:05 · 39 min</div></div>
+            <div class="li-prog"><div class="li-bar"><div style="width:100%"></div></div><span>完成</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t2">民法</div>
+            <div class="li-body"><div class="li-title">第21讲 · 所有权的取得</div><div class="li-meta">5天前 09:30 · 55 min</div></div>
+            <div class="li-prog"><div class="li-bar"><div style="width:100%"></div></div><span>完成</span></div>
+          </div>
+          <div class="listen-item">
+            <div class="li-tag t6">理论法</div>
+            <div class="li-body"><div class="li-title">第3讲 · 法律渊源与效力</div><div class="li-meta">6天前 19:00 · 43 min</div></div>
+            <div class="li-prog"><div class="li-bar"><div style="width:50%"></div></div><span>50%</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /card -->
+  </aside>
+
+  <!-- ── 右栏：做题情况 ── -->
+  <section class="right-col">
+
+    <!-- 做题三卡片 -->
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">✏️ 做题概览</span>
+        <span class="badge">累计 1,482 题</span>
+      </div>
+      <div class="quiz-grid">
+
+        <!-- 章节练习 -->
+        <div class="quiz-card">
+          <div class="qc-head">
+            <div class="qc-icon">📝</div>
+            <div class="qc-name">章节练习</div>
+            <button class="detail-btn" onclick="openModal(&#39;chapter&#39;)">查看详情 ›</button>
+          </div>
+          <div class="qc-latest">
+            <span class="ql-label">最近：</span>刑法·分则 &nbsp;<span class="ql-time">今天 10:55</span>
+          </div>
+          <div class="qc-stats">
+            <div class="qc-ring-wrap">
+              <svg class="qc-ring" viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#eeeeee" stroke-width="3.5"></circle>
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#222222" stroke-width="3.5" stroke-dasharray="63.7 37.7" stroke-dashoffset="22" stroke-linecap="round"></circle>
+              </svg>
+              <div class="qc-ring-val">72%</div>
+            </div>
+            <div class="qc-info">
+              <div class="qi-row"><span>累计题数</span><b>892题</b></div>
+              <div class="qi-row"><span>做题时长</span><b>28.4h</b></div>
+              <div class="qi-row"><span>本周完成</span><b>136题</b></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 历年真题 -->
+        <div class="quiz-card">
+          <div class="qc-head">
+            <div class="qc-icon">🏛️</div>
+            <div class="qc-name">历年真题</div>
+            <button class="detail-btn" onclick="openModal(&#39;real&#39;)">查看详情 ›</button>
+          </div>
+          <div class="qc-latest">
+            <span class="ql-label">最近：</span>2023年·民法 &nbsp;<span class="ql-time">昨天 21:42</span>
+          </div>
+          <div class="qc-stats">
+            <div class="qc-ring-wrap">
+              <svg class="qc-ring" viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#eeeeee" stroke-width="3.5"></circle>
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#555555" stroke-width="3.5" stroke-dasharray="57.6 41.8" stroke-dashoffset="22" stroke-linecap="round"></circle>
+              </svg>
+              <div class="qc-ring-val">65%</div>
+            </div>
+            <div class="qc-info">
+              <div class="qi-row"><span>累计题数</span><b>467题</b></div>
+              <div class="qi-row"><span>做题时长</span><b>19.2h</b></div>
+              <div class="qi-row"><span>覆盖年份</span><b>2019-2023</b></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 模拟试卷 -->
+        <div class="quiz-card">
+          <div class="qc-head">
+            <div class="qc-icon">🎯</div>
+            <div class="qc-name">模拟试卷</div>
+            <button class="detail-btn" onclick="openModal(&#39;mock&#39;)">查看详情 ›</button>
+          </div>
+          <div class="qc-latest">
+            <span class="ql-label">最近：</span>综合模拟卷#3 &nbsp;<span class="ql-time">5月15日</span>
+          </div>
+          <div class="qc-stats">
+            <div class="qc-ring-wrap">
+              <svg class="qc-ring" viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#eeeeee" stroke-width="3.5"></circle>
+                <circle cx="18" cy="18" r="14" fill="none" stroke="#888888" stroke-width="3.5" stroke-dasharray="51.3 48.1" stroke-dashoffset="22" stroke-linecap="round"></circle>
+              </svg>
+              <div class="qc-ring-val">58%</div>
+            </div>
+            <div class="qc-info">
+              <div class="qi-row"><span>累计套数</span><b>3套</b></div>
+              <div class="qi-row"><span>做题时长</span><b>8.5h</b></div>
+              <div class="qi-row"><span>平均用时</span><b>2.8h/套</b></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 底部两列：趋势 + 薄弱科 -->
+    <div class="bottom-row">
+
+      <!-- 正确率趋势 -->
+      <div class="card">
+        <div class="card-head">
+          <span class="card-title">📈 近7天正确率趋势</span>
+        </div>
+        <div class="chart-wrap">
+          <div class="chart-bars">
+            <div class="cb-col"><div class="cb-bar-wrap"><div class="cb-bar" style="height:58%"><span>58%</span></div></div><div class="cb-day">周一</div></div>
+            <div class="cb-col"><div class="cb-bar-wrap"><div class="cb-bar" style="height:62%"><span>62%</span></div></div><div class="cb-day">周二</div></div>
+            <div class="cb-col"><div class="cb-bar-wrap"><div class="cb-bar" style="height:65%"><span>65%</span></div></div><div class="cb-day">周三</div></div>
+            <div class="cb-col"><div class="cb-bar-wrap"><div class="cb-bar" style="height:63%"><span>63%</span></div></div><div class="cb-day">周四</div></div>
+            <div class="cb-col"><div class="cb-bar-wrap"><div class="cb-bar" style="height:70%"><span>70%</span></div></div><div class="cb-day">周五</div></div>
+            <div class="cb-col"><div class="cb-bar-wrap"><div class="cb-bar" style="height:71%"><span>71%</span></div></div><div class="cb-day">周六</div></div>
+            <div class="cb-col today"><div class="cb-bar-wrap"><div class="cb-bar today-bar" style="height:74%"><span>74%</span></div></div><div class="cb-day">今天</div></div>
+          </div>
+          <div class="chart-note">↑ 较上周提升 +16%，学习曲线持续向好</div>
+        </div>
+      </div>
+
+      <!-- 薄弱科预警 -->
+      <div class="card">
+        <div class="card-head">
+          <span class="card-title">⚠️ 薄弱科目预警</span>
+        </div>
+        <div class="weak-list">
+          <div class="weak-item">
+            <div class="weak-left">
+              <div class="weak-tag high">高风险</div>
+              <div class="weak-sub">理论法学</div>
+            </div>
+            <div class="weak-right">
+              <div class="weak-bar-wrap"><div class="weak-bar" style="width:43%"></div></div>
+              <div class="weak-rate">43%</div>
+            </div>
+          </div>
+          <div class="weak-item">
+            <div class="weak-left">
+              <div class="weak-tag mid">待加强</div>
+              <div class="weak-sub">商法</div>
+            </div>
+            <div class="weak-right">
+              <div class="weak-bar-wrap"><div class="weak-bar mid-bar" style="width:55%"></div></div>
+              <div class="weak-rate">55%</div>
+            </div>
+          </div>
+          <div class="weak-item">
+            <div class="weak-left">
+              <div class="weak-tag mid">待加强</div>
+              <div class="weak-sub">民事诉讼</div>
+            </div>
+            <div class="weak-right">
+              <div class="weak-bar-wrap"><div class="weak-bar mid-bar" style="width:60%"></div></div>
+              <div class="weak-rate">60%</div>
+            </div>
+          </div>
+          <div class="push-hint">
+            💡 推班话术：理论法正确率仅43%，高端班有专项突破课+AI刷题，帮你快速提分
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══ 做题详情弹窗 ═══ -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="closeModal()"></div>
+<div class="modal" id="modal">
+  <div class="modal-head">
+    <div>
+      <div class="modal-title" id="modal-title">做题详情 · 历年真题</div>
+      <div class="modal-sub" id="modal-sub">李小明 · 历年真题</div>
+    </div>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+
+  <!-- 弹窗筛选 Tabs -->
+  <div class="filter-tabs modal-tabs">
+    <button class="ftab" onclick="switchModalTab(this, 1)">昨天</button>
+    <button class="ftab active" onclick="switchModalTab(this, 3)">近3天</button>
+    <button class="ftab" onclick="switchModalTab(this, 7)">近7天</button>
+  </div>
+
+  <!-- 表格 -->
+  <div class="modal-table-wrap">
+    <table class="modal-table">
+      <thead>
+        <tr>
+          <th>做题类型</th>
+          <th>做题内容</th>
+          <th>做题时长</th>
+          <th>正确率</th>
+          <th>完成时间</th>
+        </tr>
+      </thead>
+      <tbody id="modal-tbody">
+      <tr>
+        <td><span class="td-type">历年真题</span></td>
+        <td style="font-weight:500;color:#111">2023年·民法·物权编</td>
+        <td style="color:#555">45 min</td>
+        <td><span class="td-rate rate-mid">65%</span></td>
+        <td style="color:#999">昨天 21:42</td>
+      </tr>
+      <tr>
+        <td><span class="td-type">历年真题</span></td>
+        <td style="font-weight:500;color:#111">2023年·民法·合同编</td>
+        <td style="color:#555">38 min</td>
+        <td><span class="td-rate rate-mid">58%</span></td>
+        <td style="color:#999">昨天 20:50</td>
+      </tr>
+      <tr>
+        <td><span class="td-type">历年真题</span></td>
+        <td style="font-weight:500;color:#111">2022年·刑法·分则</td>
+        <td style="color:#555">52 min</td>
+        <td><span class="td-rate rate-high">70%</span></td>
+        <td style="color:#999">前天 15:00</td>
+      </tr></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="./推班决策卡_files/app.js"></script>
+
+
+</body></html>
